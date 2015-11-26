@@ -1,0 +1,14 @@
+title: Glaserei Butzen
+email: info@glasbutzen.de
+description: .
+url: "http://glasbutzen.de"
+
+# Build settings
+markdown: kramdown
+
+# Sass configuration
+sass:
+  style: compressed
+gems:
+  - normalize-scss
+  - support-for
