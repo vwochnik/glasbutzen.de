@@ -3,6 +3,10 @@ email: info@glasbutzen.de
 description: .
 url: "http://glasbutzen.de"
 
+collections:
+  downloads:
+    output: true
+
 # Build settings
 markdown: kramdown
 
