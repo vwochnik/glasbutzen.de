@@ -1,6 +1,25 @@
----
-layout: default
----
-<h1>{{ title }}</h1>
-<p>File: {{ page.file }}</p>
-<p><a class="dlreader" href="http://www.adobe.com/de/products/reader.html" target="_blank" title="Adobe Reader herunterladen">Zur direkten Ansicht, benötigen Sie den Acrobat Reader von Adobe. Diesen können sie mit einem Klick hier downloaden.</a></p>
+<!DOCTYPE html>
+<html>
+<head lang="de" prefix="og: http://ogp.me/ns#">
+  {% include head.html %}
+  <meta http-equiv="refresh" content="10; URL={{ site.url }}{{ site.baseurl }}/files/{{ page.file }}" />
+</head>
+<body>
+  <div class="wrapper">
+    {% include inline/header.html %}
+    <div class="content">
+      <h1>{{ page.title }}</h1>
+      <p>Der Download started automatisch. Sollte dies nicht der Fall sein, klicken Sie <a href="{{ site.url }}{{ site.baseurl }}/files/{{ page.file }}" title="{{ page.title }}">hier</a>.</p>
+      {% if page.extension == 'pdf' %}
+        <h2>Adobe Reader</h2>
+        <p><a class="dlreader" href="http://www.adobe.com/de/products/reader.html" target="_blank" title="Adobe Reader herunterladen">Zur direkten Ansicht benötigen Sie den Adobe Reader. Diesen können sie mit einem Klick auf das Piktogramm downloaden.</a></p>
+      {% endif %}
+      <h2>Der Download funktioniert nicht?</h2>
+      <p>Dann <a href="/kontakt.html" title="Kontakt">kontaktieren Sie uns</a> bitte und wir werden den Fehler schnellstmöglich beheben.</p>
+    </div>
+    {% include inline/footer.html %}
+  </div>
+  <script>!function(e){setTimeout(function(){e.location.replace("{{ site.url }}{{ site.baseurl }}/files/{{ page.file }}")},1e4)}(window);</script>
+</body>
+</html>
+{% include scripts.html %}
