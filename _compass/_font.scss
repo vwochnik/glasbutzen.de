@@ -1,0 +1,102 @@
+/*
+ * This file contains font sizes and typography adjustments.
+ */
+
+$rhythm-unit: "rem";
+$round-to-nearest-half-line: false;
+$base-font-size: 16px;
+$base-line-height: 20px;
+
+@include establish-baseline;
+  /*
+  @include unstyled-link;
+  */
+
+@mixin font-scaling-mixin($viewport, $scale) {
+  @include breakpoint($viewport) {
+    body {
+       @include adjust-font-size-to($scale*$body-font-size, $scale);
+    }
+
+    h1 {
+       @include adjust-font-size-to($scale*$h1-font-size, $scale);
+    }
+
+    h2 {
+       @include adjust-font-size-to($scale*$h2-font-size, $scale);
+    }
+
+    h3 {
+       @include adjust-font-size-to($scale*$h3-font-size, $scale);
+    }
+
+    .scaled {
+      @include transform(scale($scale));
+    }
+
+    footer {
+       @include adjust-font-size-to($scale*$footer-font-size, $scale);
+    }
+
+    .cover-lead {
+       @include adjust-font-size-to($scale*$cover-lead-font-size, $scale);
+    }
+
+    .cover-slogan {
+       @include adjust-font-size-to($scale*$cover-slogan-font-size, $scale);
+    }
+
+    /* set line height to 1rem */
+    .jqcloud {
+      @include adjust-leading-to(16.0/20.0);
+    }
+  }
+}
+
+body {
+   font-family: $body-font-face;
+}
+
+.segment > .segment-heading,
+.footer-segment {
+  text-align: center;
+}
+
+a {
+  &, &:visited, &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.screenreader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.pull-left {
+  float: left;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.pull-right {
+  float: right;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+@include font-scaling-mixin($viewport-tiny, $font-scale-tiny);
+@include font-scaling-mixin($viewport-small, $font-scale-small);
+@include font-scaling-mixin($viewport-medium, $font-scale-medium);
+@include font-scaling-mixin($viewport-large, $font-scale-large);
+@include font-scaling-mixin($viewport-huge, $font-scale-huge);

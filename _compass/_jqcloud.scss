@@ -1,0 +1,29 @@
+.jqcloud {
+  overflow: hidden;
+  position: relative;
+
+  span {
+    padding: 0;
+    color: $theme-primary-color;
+
+    &.w5 {
+      font-size: 200%;
+    }
+    
+    &.w4 {
+      font-size: 170%;
+    }
+
+    &.w3 {
+      font-size: 140%;
+    }
+
+    &.w2 {
+      font-size: 110%;
+    }
+
+    &.w1 {
+      font-size: 80%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/*
+ * This file contains settings variables used in other included SCSS files.
+ */
+
+// tiny mobile phones
+$viewport-tiny:   'screen';
+// portrait mobile phones
+$viewport-small:  'screen' (min-width 34em);
+// tablets
+$viewport-medium: 'screen' (min-width 48em);
+// laptops and desktops
+$viewport-large:  'screen' (min-width 62em);
+// large desktops and televisions
+$viewport-huge:   'screen' (min-width 75em);
+
+// tiny font scaling
+$font-scale-tiny: 0.8;
+$font-scale-small: 0.8;
+$font-scale-medium: 1.0;
+$font-scale-large: 1.2;
+$font-scale-huge: 1.5;
+
+/* font faces and sizes */
+$body-font-size: 14px;
+$body-font-face: "Open Sans", Arial, Helvetica, sans-serif;
+$h1-font-size: 36px;
+$h2-font-size: 24px;
+$h3-font-size: 18px;
+$footer-font-size: 10px;
+$cover-lead-font-size: 18px;
+$cover-slogan-font-size: 36px;
+
+/* theme colors */
+$theme-background-color: #fff;
+$theme-text-color: #000;
+$theme-primary-color: #0F6C3A;
+$theme-inverted-color: #93F0C5;
+$theme-error-color: #6C0F3A;
+$theme-footer-color: #444;
+$theme-footer-link-color: #464;

@@ -1,0 +1,92 @@
+/*
+ * This file contains grid layout definitions.
+ */
+
+/* global susy grid settings */
+$susy: (
+  global-box-sizing: border-box,
+  debug: (image: hide)
+);
+
+@include border-box-sizing;
+
+@mixin segment-grid($viewport, $container, $gutters) {
+  $susy-options: null;
+  @if $container {
+    $susy-options: (container: $container, gutters: $gutters);
+  } @else {
+    $susy-options: (gutters: $gutters);
+  }
+
+  @include susy-breakpoint($viewport, $susy-options) {
+    .segment {
+      @if $container {
+        @include container(center);
+      }
+      padding: gutter(6) gutter(12);
+
+      > .segment-heading {
+        margin: 0 0 gutter(6) 0;
+      }
+    }
+  }
+}
+
+@mixin two-column-grid($class, $viewport, $gutters, $with-columns) {
+  $susy-options: null;
+  @if $with-columns {
+    $susy-options: (columns: 2, gutters: $gutters, container-position: 0);
+  } @else {
+    $susy-options: (gutters: $gutters, container-position: 0);
+  }
+
+  @include susy-breakpoint($viewport, $susy-options) {
+    .#{$class} {
+      @include container();
+
+      @if $with-columns {
+        > .#{$class}-left-column {
+          @include span(1 first);
+        }
+
+        > .#{$class}-right-column {
+          @include span(1 last);
+        }
+      }
+    }
+  }
+}
+
+// segment grid
+@include segment-grid($viewport-tiny, false, 1/4);
+@include segment-grid($viewport-small, false, 1/4);
+@include segment-grid($viewport-medium, 80%, 1/4);
+@include segment-grid($viewport-large, 75%, 1/4);
+@include segment-grid($viewport-huge, 60%, 1/4);
+
+// contact form grid
+@include two-column-grid('contact-form', $viewport-tiny, 1/24, false);
+@include two-column-grid('contact-form', $viewport-small, 1/24, true);
+@include two-column-grid('contact-form', $viewport-medium, 1/12, true);
+
+// qr code grid
+@include two-column-grid('qr-code-images', $viewport-tiny, 1/24, false);
+@include two-column-grid('qr-code-images', $viewport-medium, 1/12, true);
+
+@include susy-breakpoint($viewport-tiny, (gutters: 1/24)) {
+    .contact-form-input {
+      margin: gutter(2) 0;
+    }
+}
+
+@include susy-breakpoint($viewport-small, (gutters: 1/24)) {
+    .contact-form-input {
+      margin: gutter(2) 0;
+    }
+}
+
+@include susy-breakpoint($viewport-medium, (gutters: 1/12)) {
+    .contact-form-input {
+      margin: gutter(2) 0;
+    }
+}

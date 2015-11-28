@@ -11,10 +11,9 @@ collections:
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
+exclude: ['Gemfile', 'Gemfile.lock']
 
-# Sass configuration
-sass:
-  style: compressed
 gems:
-  - normalize-scss
-  - support-for
+- jekyll-compass
+- jekyll-email-protect
