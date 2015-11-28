@@ -19,6 +19,13 @@
     padding: 0.3em 0.2em;
   }
 
+  > .navigation-wrapper {
+    position: absolute;
+    display: block;
+    left: 0; top: 0; right: 0;
+    width: 100%;
+  }
+
   > .cover-arrow-down {
     position: absolute;
     display: block;

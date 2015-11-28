@@ -26,7 +26,24 @@ a {
   @include link-colors($theme-primary-color, $theme-primary-color, false, $theme-primary-color, $theme-primary-color);
 }
 
+.navigation-segment {
+  color: $theme-inverted-color;
+
+  a {
+    @include link-colors($theme-inverted-color, $theme-inverted-color, false, $theme-inverted-color, $theme-inverted-color);
+  }
+
+  .site-menu > li > a {
+    &:hover, &:focus, &:active {
+      border-color: $theme-inverted-color;
+      text-decoration: none;
+    }
+  }
+}
+
 .footer-segment {
+  padding-bottom: 0;
+
   > p {
     color: $theme-footer-color;
 

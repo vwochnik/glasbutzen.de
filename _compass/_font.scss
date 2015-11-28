@@ -34,6 +34,10 @@ $base-line-height: 20px;
       @include transform(scale($scale));
     }
 
+    header {
+       @include adjust-font-size-to($scale*$header-font-size, 0.8*$scale);
+    }
+
     footer {
        @include adjust-font-size-to($scale*$footer-font-size, $scale);
     }
@@ -46,9 +50,8 @@ $base-line-height: 20px;
        @include adjust-font-size-to($scale*$cover-slogan-font-size, $scale);
     }
 
-    /* set line height to 1rem */
     .jqcloud {
-      @include adjust-leading-to(16.0/20.0);
+      line-height: 1em;
     }
   }
 }
