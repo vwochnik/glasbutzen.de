@@ -33,4 +33,4 @@ $susy: (
 @include segment-grid($viewport-small, false, 1/4);
 @include segment-grid($viewport-medium, 80%, 1/4);
 @include segment-grid($viewport-large, 75%, 1/4);
-@include segment-grid($viewport-huge, 60%, 1/4);
+@include segment-grid($viewport-huge, 70%, 1/4);

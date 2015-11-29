@@ -10,12 +10,54 @@
 
   .site-menu {
     float: right;
-    @include horizontal-list(false);
+  }
 
-    > li > a {
-      display: inline-block;
-      border-top: 0.2em solid transparent;
-      padding: 0.4em 0.3em 0.2em;
+  .site-menu-toggle {
+    display: block;
+    float: right;
+    padding: 0.6em 0.3em 0.2em;
+
+    &, > img {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+
+@include breakpoint($viewport-tiny) {
+  .navigation {
+    .site-menu {
+      display: none;
+      list-style: none;
+      margin: 2.5em -1.3em 0 0;
+
+      &.visible {
+        display: block;
+      }
+
+      li {
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@include breakpoint(($viewport-small, $viewport-medium, $viewport-large, $viewport-huge)) {
+  .navigation {
+    .site-menu {
+      display: block;
+      @include horizontal-list(false);
+
+      > li > a {
+        display: inline-block;
+        border-top: 0.2em solid transparent;
+        padding: 0.4em 0.3em 0.2em;
+      }
+    }
+
+    .site-menu-toggle {
+      display: none;
     }
   }
 }
