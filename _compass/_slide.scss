@@ -1,0 +1,13 @@
+.image-slideshow-wrapper {
+  overflow: hidden;
+
+  .image-slideshow-content {
+    position: relative;
+    left: 0; top: 0;
+    
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(center);
+  }
+}
