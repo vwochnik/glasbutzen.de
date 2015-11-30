@@ -10,5 +10,11 @@
     @include flex-shrink(0);
     @include align-items(flex-start);
     @include justify-content(center);
+
+    img {
+      width: 1.56*8em;
+      min-width: 1.56*8em;
+      height: 8em;
+    }
   }
 }
