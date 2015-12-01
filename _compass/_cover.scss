@@ -38,5 +38,6 @@
     height: 2em;
     background: url('/img/arrow-down.svg') no-repeat center center;
     @include background-size(contain);
+    z-index: 1;
   }
 }

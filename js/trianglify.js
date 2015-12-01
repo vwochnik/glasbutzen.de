@@ -1,7 +1,7 @@
 (function(wnd, $, Trianglify) {
     $(function() {
       $('.trianglify').each(function() {
-        var $elem = $(this),
+        var $elem = $(this), $canvas = undefined,
             id = (((1 + Math.random()) * 0x10000)|0).toString(16).substring(1).toUpperCase(),
             xColors = ($elem.attr('data-x-colors') || "").split(/,\s*/),
             yColors = ($elem.attr('data-y-colors') || "").split(/,\s*/),
@@ -10,12 +10,19 @@
         $(wnd).on('resize.trianglify-'+id, function() {
           var pattern = new Trianglify({
             cell_size: cellSize,
-            width: $elem.width(),
-            height: $elem.height(),
+            width: $elem.outerWidth(),
+            height: $elem.outerHeight(),
             x_colors: xColors,
             y_colors: yColors
           });
-          $elem.css({backgroundImage: 'url("'+pattern.png()+'")'});
+          if ($canvas)
+            $canvas.remove();
+          $canvas = $(pattern.canvas()).css({
+            position: 'absolute',
+            left: 0, top: 0,
+            zIndex: -1
+          });
+          $elem.css({position: 'relative', background: 'none'}).append($canvas);
         }).trigger('resize.trianglify-'+id);
       });
     });
