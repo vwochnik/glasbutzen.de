@@ -28,9 +28,41 @@ $susy: (
   }
 }
 
+@mixin contact-box-aside-grid($viewport, $gutters, $content, $aside, $columns) {
+  $susy-options: null;
+  @if $columns > 0 {
+    $susy-options: (columns: $columns, gutters: $gutters, container-position: 0);
+  } @else {
+    $susy-options: (gutters: $gutters, container-position: 0);
+  }
+
+  @include susy-breakpoint($viewport, $susy-options) {
+    .contact-box-aside {
+      @include container();
+
+      @if $columns > 0 {
+        > .main-content {
+          @include span($content first);
+        }
+
+        > .contact-box {
+          @include span($aside last);
+        }
+      }
+    }
+  }
+}
+
+
 // segment grid
 @include segment-grid($viewport-tiny, false, 1/4);
 @include segment-grid($viewport-small, false, 1/4);
 @include segment-grid($viewport-medium, 80%, 1/4);
 @include segment-grid($viewport-large, 75%, 1/4);
 @include segment-grid($viewport-huge, 70%, 1/4);
+
+// contact box aside grid
+@include contact-box-aside-grid($viewport-tiny, 1/24, 0, 0, 0);
+@include contact-box-aside-grid($viewport-small, 1/6, 4, 2, 6);
+@include contact-box-aside-grid($viewport-medium, 1/6, 4, 2, 6);
+@include contact-box-aside-grid($viewport-medium, 1/2, 7, 5, 12);
