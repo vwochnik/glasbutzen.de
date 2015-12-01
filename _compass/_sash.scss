@@ -3,7 +3,12 @@
   @include background-image(radial-gradient(#16af60, #0E6B39));
 
   .content-heading {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
     margin: 0;
     padding: 0.3em 0.2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
