@@ -5,19 +5,19 @@ title: Download
 <html>
 <head lang="de" prefix="og: http://ogp.me/ns#">
   {% include head.html %}
-  <meta http-equiv="refresh" content="10; URL={{ site.url }}{{ site.baseurl }}/files/{{ page.file }}" />
+  <meta http-equiv="refresh" content="10; URL={{ site.baseurl }}/files/{{ page.file }}" />
 </head>
 <body>
   <div class="wrapper">
     {% include inline/sash.html %}
     <section class="segment content-segment" id="content">
-      <p>Sie sind im Begriff die Datei <b>{{ page.title }}</b> herunterzuladen. Der Download started automatisch. Sollte dies nicht der Fall sein, klicken Sie <a href="{{ site.url }}{{ site.baseurl }}/files/{{ page.file }}" title="{{ page.title }}">hier</a>.</p>
+      <p>Sie sind im Begriff die Datei <b>{{ page.title }}</b> herunterzuladen. Der Download started automatisch. Sollte dies nicht der Fall sein, klicken Sie <a href="{{ site.baseurl }}/files/{{ page.file }}" title="{{ page.title }}">hier</a>.</p>
       <h2>Der Download funktioniert nicht?</h2>
       <p>Dann <a href="/kontakt.html" title="Kontakt">kontaktieren Sie uns</a> bitte und wir werden den Fehler schnellstmöglich beheben.</p>
     </section>
     {% include inline/footer.html %}
   </div>
-  <script>!function(e){setTimeout(function(){e.location.replace("{{ site.url }}{{ site.baseurl }}/files/{{ page.file }}")},1e4)}(window);</script>
+  <script>!function(e){setTimeout(function(){e.location.replace("{{ site.baseurl }}/files/{{ page.file }}")},1e4)}(window);</script>
 </body>
 </html>
 {% include scripts.html %}
