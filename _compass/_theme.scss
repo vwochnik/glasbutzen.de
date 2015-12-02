@@ -14,11 +14,8 @@ h1, h2, h3 {
 .cover, .sash {
   h1, h2, h3, p {
     color: $theme-inverted-color;
+    background-color: rgba($theme-primary-color, 0.5);
   }
-}
-
-.cover-slogan, .content-heading {
-  background-color: rgba($theme-primary-color, 0.5);
 }
 
 a {
@@ -33,9 +30,17 @@ a {
   }
 
   .site-menu > li > a {
-    &:hover, &:focus, &:active {
-      border-color: $theme-inverted-color;
+    background-color: rgba($theme-primary-color, 0.85);
+
+    &, &:hover, &:focus, &:active {
       text-decoration: none;
+      border-color: rgba($theme-inverted-color, 0.7);
+    }
+  }
+
+  @include breakpoint($viewport-small) {
+    .site-menu > li > a {
+      background-color: transparent;
     }
   }
 }

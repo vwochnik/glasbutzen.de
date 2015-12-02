@@ -9,7 +9,19 @@
   }
 
   .site-menu {
-    float: right;
+    display: block;
+    @include overlay(fixed, 1000, 0.5s);
+    margin: 0; padding: 0;
+
+    > li {
+      display: block;
+
+      > a {
+        display: block;
+        border-bottom: 0.1em solid transparent;
+        padding: 0.6em 0.7em 0.4em;
+      }
+    }
   }
 
   .site-menu-toggle {
@@ -17,42 +29,43 @@
     float: right;
     padding: 0.6em 0.3em 0.2em;
 
-    &, > img {
-      width: 1em;
-      height: 1em;
-    }
+		&:after {
+			display: inline-block;
+			content: url('../img/menu-toggle.svg');
+			width: 1em; height: 1em;
+			margin-left: 0.2em;
+			vertical-align: -15%;
+		}
   }
 }
 
 @include breakpoint($viewport-tiny) {
   .navigation {
-    .site-menu {
-      display: none;
-      list-style: none;
-      margin: 2.5em -1.3em 0 0;
-
-      &.visible {
-        display: block;
-      }
-
-      li {
-        display: block;
-        text-align: right;
-      }
-    }
   }
 }
 
-@include breakpoint(($viewport-small, $viewport-medium, $viewport-large, $viewport-huge)) {
+@include breakpoint($viewport-small) {
   .navigation {
     .site-menu {
-      display: block;
+      @include no-overlay;
+      float: right;
       @include horizontal-list(false);
 
-      > li > a {
-        display: inline-block;
-        border-top: 0.2em solid transparent;
-        padding: 0.4em 0.3em 0.2em;
+      > li {
+        &.close {
+          display: none;
+        }
+
+        > a {
+          display: inline-block;
+          border-bottom: none;
+          padding: 0.6em 0.3em 0.2em;
+
+          &:hover, &:focus, &:active {
+            border-top: 0.2em solid transparent;
+            padding: 0.4em 0.3em 0.2em;
+          }
+        }
       }
     }
 
