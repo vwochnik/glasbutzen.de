@@ -47,3 +47,10 @@
     height: auto;
   }
 }
+
+@mixin dynamic-image-size($width, $height, $em-height) {
+  $ratio: $width/$height;
+
+  width: $ratio*$em-height;
+  height: $em-height;
+}
