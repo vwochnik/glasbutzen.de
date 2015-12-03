@@ -16,19 +16,19 @@
   }
 
   .dorma-logo img {
-    @include dynamic-image-size(269, 138, 4em);
+    @include dynamic-image-size(269, 138, 3em);
   }
 
   .pauli-sohn-logo img {
-    @include dynamic-image-size(185, 132, 4em);
+    @include dynamic-image-size(185, 132, 2.5em);
   }
 
   .klmegla-logo img {
-    @include dynamic-image-size(800, 202, 2.5em);
+    @include dynamic-image-size(800, 202, 1.8em);
   }
 
   .sika-logo img {
-    @include dynamic-image-size(159, 138, 3.5em);
+    @include dynamic-image-size(159, 138, 3.0em);
   }
 
   .otto-chemie-logo img {
