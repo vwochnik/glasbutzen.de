@@ -1,41 +1,48 @@
 .partners {
-  list-style: none;
-  padding: 0;
-  margin-left: -0.8em;
-  margin-right: -0.8em;
-
-  @include display-flex(flex);
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  @include align-items(center);
-  @include justify-content(center);
-
-  > li {
-    display: block;
-    margin: 0.8em;
+  .partners-heading {
+    font-weight: lighter;
+    text-align: center;
   }
 
-  .dorma-logo img {
-    @include dynamic-image-size(269, 138, 3em);
-  }
+  .partners-list {
+    list-style: none;
+    padding: 0;
+    margin-left: -0.8em;
+    margin-right: -0.8em;
 
-  .pauli-sohn-logo img {
-    @include dynamic-image-size(185, 132, 2.5em);
-  }
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
 
-  .klmegla-logo img {
-    @include dynamic-image-size(800, 202, 1.8em);
-  }
+    > li {
+      display: block;
+      margin: 0.8em;
+    }
 
-  .sika-logo img {
-    @include dynamic-image-size(159, 138, 3.0em);
-  }
+    .dorma-logo img {
+      @include dynamic-image-size(269, 138, 3em);
+    }
 
-  .otto-chemie-logo img {
-    @include dynamic-image-size(228, 98, 2.5em);
-  }
+    .pauli-sohn-logo img {
+      @include dynamic-image-size(185, 132, 2.5em);
+    }
 
-  .glasdesign2000-logo img {
-    @include dynamic-image-size(266, 35, 1em);
+    .klmegla-logo img {
+      @include dynamic-image-size(800, 202, 1.8em);
+    }
+
+    .sika-logo img {
+      @include dynamic-image-size(159, 138, 3.0em);
+    }
+
+    .otto-chemie-logo img {
+      @include dynamic-image-size(228, 98, 2.5em);
+    }
+
+    .glasdesign2000-logo img {
+      @include dynamic-image-size(266, 35, 1em);
+    }
   }
 }
