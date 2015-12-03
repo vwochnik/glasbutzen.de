@@ -30,10 +30,6 @@ $base-line-height: 20px;
        @include adjust-font-size-to($scale*$h3-font-size, $scale);
     }
 
-    .scaled {
-      @include transform(scale($scale));
-    }
-
     header {
        @include adjust-font-size-to($scale*$header-font-size, 0.8*$scale);
     }
@@ -84,18 +80,6 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.pull-left {
-  float: left;
-  margin-right: 0.5em;
-  margin-bottom: 0.2em;
-}
-
-.pull-right {
-  float: right;
-  margin-right: 0.5em;
-  margin-bottom: 0.2em;
 }
 
 @include font-scaling-mixin($viewport-tiny, $font-scale-tiny);

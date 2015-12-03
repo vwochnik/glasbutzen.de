@@ -1,0 +1,17 @@
+.partners {
+  list-style: none;
+  padding: 0;
+  margin-left: -0.8em;
+  margin-right: -0.8em;
+
+  @include display-flex(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+
+  > li {
+    display: block;
+    margin: 0.8em;
+  }
+}
