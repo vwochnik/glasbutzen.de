@@ -5,8 +5,35 @@
    * items. */
   height: 100vh;
 
-  /* Fallback for trianglify */
-  @include background-image(radial-gradient(#16af60, #0E6B39));
+  > .cover-images {
+    z-index: -1;
+    overflow: hidden;
+
+    &, > .cover-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    > .cover-image {
+      visibility: hidden;
+      @include opacity(0.0);
+      z-index: 0;
+      @include transition(opacity 2s ease-in-out, z-index 0s linear, visibility 0s linear);
+
+      &.end-visible {
+        @include transition(opacity 2s ease-in-out, z-index 0s linear 2s, visibility 0s linear 2s);
+      }
+
+      &.visible {
+        visibility: visible;
+        @include opacity(1.0);
+        z-index: 1;
+      }
+    }
+  }
 
   padding-bottom: 4em;
 

@@ -13,10 +13,10 @@
           right: 0, bottom: 0,
           zIndex: -1
         });
-        $elem.css({
-          position: 'relative',
-          background: 'none'
-        }).append($canvas);
+        $elem.css({ background: 'none' }).append($canvas);
+        if (!/^(relative|absolute|fixed)$/.test($elem.css('position'))) {
+          $elem.css({ position: 'relative' });
+        }
 
         $(wnd).on('resize.trianglify-'+id, function() {
           var pattern = new Trianglify({
