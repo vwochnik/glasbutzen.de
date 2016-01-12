@@ -6,6 +6,7 @@
   height: 100vh;
 
   > .cover-images {
+    background-color: $theme-primary-color;
     z-index: -1;
     overflow: hidden;
 
@@ -21,10 +22,10 @@
       visibility: hidden;
       @include opacity(0.0);
       z-index: 0;
-      @include transition(opacity 2s ease-in-out, z-index 0s linear, visibility 0s linear);
+      @include transition(opacity 1s ease-in-out);
 
       &.end-visible {
-        @include transition(opacity 2s ease-in-out, z-index 0s linear 2s, visibility 0s linear 2s);
+        @include transition(opacity 0s linear);
       }
 
       &.visible {
