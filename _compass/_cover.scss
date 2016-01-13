@@ -33,6 +33,26 @@
         @include opacity(1.0);
         z-index: 1;
       }
+
+      &.cover-image-one {
+        background: url('../img/cover/cover1.jpg') no-repeat center center;
+        @include background-size(cover);
+      }
+
+      &.cover-image-two {
+        background: url('../img/cover/cover2.jpg') no-repeat center center;
+        @include background-size(cover);
+      }
+
+      &.cover-image-three {
+        background: url('../img/cover/cover3.jpg') no-repeat center center;
+        @include background-size(cover);
+      }
+
+      &.cover-image-four {
+        background: url('../img/cover/cover4.jpg') no-repeat center center;
+        @include background-size(cover);
+      }
     }
   }
 
