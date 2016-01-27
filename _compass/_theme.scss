@@ -15,6 +15,7 @@ h1, h2, h3 {
   h1, h2, h3, p {
     color: $theme-inverted-color;
     background-color: rgba($theme-primary-color, 0.5);
+    @include single-box-shadow(0.10rem, 0.10rem, 0.2rem, 0.01rem, rgba($theme-primary-color, 0.5));
   }
 }
 
@@ -29,6 +30,10 @@ a {
     @include link-colors($theme-inverted-color, $theme-inverted-color, false, $theme-inverted-color, $theme-inverted-color);
   }
 
+  .site-menu-toggle {
+    @include single-text-shadow(0.10rem, 0.10rem, 0.3rem, 0.02rem, $theme-primary-color);
+  }
+
   .site-menu > li > a {
     background-color: rgba($theme-primary-color, 0.85);
 
@@ -41,6 +46,7 @@ a {
   @include breakpoint($viewport-small) {
     .site-menu > li > a {
       background-color: transparent;
+      @include single-text-shadow(0.10rem, 0.10rem, 0.3rem, 0.02rem, $theme-primary-color);
     }
   }
 }
