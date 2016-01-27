@@ -1,0 +1,13 @@
+---
+layout: page
+title: Referenzen
+---
+<ul class="references-gallery">
+  {% for reference in site.data.references %}
+    <li>
+      <a href="{{ site.baseurl }}{{ reference.src }}" title="Referenz {{ reference.index }}" rel="lightbox">
+        <img class="reference-thumb" src="{{ site.baseurl }}{{ reference.src }}" width="{{ reference.width }}" height="{{ reference.height }}" alt="Referenz {{ reference.index }}">
+      </a>
+    </li>
+  {% endfor %}
+</ul>

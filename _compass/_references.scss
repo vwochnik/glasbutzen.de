@@ -1,0 +1,21 @@
+.references-gallery {
+  @include flex-gallery;
+  list-style: none;
+  margin: -0.2em;
+  padding: 0;
+
+  > li {
+    width: 8em;
+    height: 8em;
+    margin: 0.2em;
+    @include flex-cover;
+
+    .reference-thumb {
+      display: block;
+      height: auto;
+      width: auto;
+      max-width: 8em;
+      max-height: 8em;
+    }
+  }
+}

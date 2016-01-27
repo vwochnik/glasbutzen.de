@@ -76,3 +76,9 @@ a {
 	height: 50vh;
   color: #0F6C3A;
 }
+
+.references-gallery {
+  > li {
+    background-color: rgba($theme-inverted-color, 0.3);
+  }
+}

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.4.0)
     breakpoint (2.5.0)
       sass (~> 3.3)
       sassy-maps (< 1.0.0)
@@ -20,6 +21,8 @@ GEM
       sass (>= 3.2, < 3.5)
     compass-normalize (1.5)
       compass (>= 0.12.0)
+    fastimage (1.8.1)
+      addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
     jekyll (3.0.1)
       colorator (~> 0.1)
@@ -64,6 +67,7 @@ DEPENDENCIES
   breakpoint
   compass (>= 1.1.0.alpha.3)
   compass-normalize
+  fastimage
   jekyll (= 3.0.1)
   jekyll-compass (= 2.0.1)
   jekyll-email-protect (= 1.0.3)
@@ -71,4 +75,4 @@ DEPENDENCIES
   susy
 
 BUNDLED WITH
-   1.10.4
+   1.10.6
