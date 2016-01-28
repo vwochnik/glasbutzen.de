@@ -9,6 +9,7 @@
     padding: 0;
     margin-left: -0.8em;
     margin-right: -0.8em;
+    overflow: hidden;
 
     @include display-flex(flex);
     @include flex-direction(row);
