@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-compass', '2.0.1'
   gem 'jekyll-email-protect', '1.0.3'
   gem 'jekyll-sitemap'
+  gem 'jekyll-deploy'
 end
 
 gem 'compass-normalize'

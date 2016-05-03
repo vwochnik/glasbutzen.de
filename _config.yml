@@ -43,3 +43,6 @@ exclude: ['Gemfile', 'Gemfile.lock']
 gems:
 - jekyll-compass
 - jekyll-email-protect
+
+deploy:
+- ../.deploy-script.sh
