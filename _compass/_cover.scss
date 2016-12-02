@@ -93,4 +93,24 @@
     @include background-size(contain);
     z-index: 1;
   }
+
+  > .cover-call-us {
+    position: absolute;
+    display: none;
+    right: 2em;
+    bottom: 2em;
+    height: 3em;
+    padding: 0.25em 0.25em 0.25em 3.5em;
+    background: url('/img/call-us.svg') no-repeat;
+    background-position: 0.25em 0.25em;
+    background-size: 2.5em 2.5em;
+    white-space: nowrap;
+    z-index: 1;
+  }
+}
+
+@include breakpoint($viewport-medium) {
+  .cover > .cover-call-us {
+    display: block;
+  }
 }

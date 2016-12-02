@@ -46,6 +46,10 @@ $base-line-height: 20px;
        @include adjust-font-size-to($scale*$cover-slogan-font-size, $scale);
     }
 
+    .cover-call-us {
+       @include adjust-font-size-to($scale*$cover-call-us-font-size, $scale);
+    }
+
     .jqcloud {
       line-height: 1em;
     }
@@ -80,6 +84,14 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.cover-call-us {
+  font-weight: bold;
+
+  .call-to-action {
+    font-size: 0.6em;
+  }
 }
 
 @include font-scaling-mixin($viewport-tiny, $font-scale-tiny);

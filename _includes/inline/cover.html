@@ -11,5 +11,11 @@
   <!--h1 class="cover-lead">Glaserei Butzen</h1>
   <p class="cover-slogan">Ihr Glaser im Grenzland</p-->
   <img class="cover-logo" src="/img/logo-cover.svg" alt="Glaserei Butzen - Ihr Glaser im Grenzland">
+  {% if page.url == "/" %}
+    <div class="cover-call-us">
+      <div class="call-to-action">Rufen Sie uns an!</div>
+      <a href="tel:+492153957209" title="+49 (0) 21 53 / 95 72 09">+49 (0) 21 53 / 95 72 09</a>
+    </div>
+  {%endif %}
   <a href="#content" class="cover-arrow-down animated-scroll"></a>
 </section>
