@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'jekyll', '3.0.1'
+gem 'jekyll', '3.6.3'
 gem 'compass', '>= 1.1.0.alpha.3'
 gem 'fastimage'
 
